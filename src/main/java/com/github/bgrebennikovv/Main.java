@@ -17,8 +17,8 @@ public class Main {
 
         // Task 3
         System.out.println("Четные числа");
-        for (int i = 1; i < 17; i++) {
-            if (i % 2 == 0) {
+        for (int i = 0; i <= 17; i++) {
+            if (i % 2 == 0 & i != 0) {
                 System.out.println(i);
             }
         }

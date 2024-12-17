@@ -68,7 +68,7 @@ public class Main {
         for (int i = 0; i < 12; i++) {
 
             if (i == 0) {
-                balance = deposit;
+                balance += deposit;
             } else {
                 double depositIncome = balance * 0.01;
                 balance = (balance + deposit) + depositIncome;

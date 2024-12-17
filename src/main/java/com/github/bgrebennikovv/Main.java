@@ -51,7 +51,7 @@ public class Main {
         }
 
         // Task 8
-        int deposit = 29000;
+        double deposit = 29000;
         System.out.printf("\nЕжемесячный вклад: %s \n", deposit);
         for (int i = 1; i <= 12; i++) {
             System.out.printf("""
@@ -63,10 +63,20 @@ public class Main {
         // Task 9
         System.out.println("\nРасчет со ставкой 12% годовых: \n");
 
-        for (int i = 1; i <= 12; i++) {
+        double balance = 0;
+
+        for (int i = 0; i < 12; i++) {
+
+            if (i == 0) {
+                balance = deposit;
+            } else {
+                double depositIncome = balance * 0.01;
+                balance = (balance + deposit) + depositIncome;
+            }
+
             System.out.printf("""
-                    Месяц %s, сумма накоплений равна %s рублей
-                    """, i, (deposit * i) * 1.01
+                    Месяц %s, сумма накоплений равна %.2f рублей
+                    """, i+1, balance
             );
         }
 
